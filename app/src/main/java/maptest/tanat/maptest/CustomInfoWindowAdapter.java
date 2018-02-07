@@ -34,8 +34,6 @@ public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
         tvData.setText("28 Oct 2017");
         tvPoison.setText("Poison");
         return view;
-
-    //    return null;
     }
 
     @Override
