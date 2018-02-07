@@ -79,11 +79,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public boolean onMarkerClick(Marker marker)
             {
+                // get position marker
+                Double lat = marker.getPosition().latitude;
+                Double lng = marker.getPosition().longitude;
+
                 //center camera
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(marker.getPosition())
-                        .bearing(0)
-                        .build();
-                map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                map.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(lat, lng)));
+
+                // set position info window
+                marker.setInfoWindowAnchor(0.5f, 5f);
 
                 //show info window
                 marker.showInfoWindow();
