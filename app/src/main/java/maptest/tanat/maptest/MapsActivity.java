@@ -87,7 +87,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 map.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(lat, lng)));
 
                 // set position info window
-                marker.setInfoWindowAnchor(0.5f, 5.8f);
+                marker.setInfoWindowAnchor(0.5f, 5.3f);
 
                 //show info window
                 marker.showInfoWindow();
